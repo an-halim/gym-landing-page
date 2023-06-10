@@ -11,7 +11,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>ALIV GYN</title>
+				<title>ALIV GYM - Your Fitness Journey Starts Here</title>
 				<link rel='icon' href='/favicon.ico' />
 				<link
 					rel='preload'
