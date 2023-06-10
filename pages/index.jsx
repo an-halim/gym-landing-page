@@ -48,6 +48,53 @@ export default function Home() {
 						gtag('config', 'G-RC2CES8BLP');`,
 					}}
 				/>
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
+				<meta
+					name='description'
+					content='ALIVgym is a premier fitness and wellness center offering a wide range of services, including personal training, group classes, and nutritional guidance. Get fit and stay healthy with ALIVgym.'
+				/>
+				<meta
+					name='keywords'
+					content='ALIVgym, fitness, wellness center, personal training, group classes, nutrition, health'
+				/>
+				<meta name='robots' content='index, follow' />
+				<meta name='googlebot' content='index, follow' />
+				<meta
+					property='og:title'
+					content='ALIVgym - Fitness and Wellness Center'
+				/>
+				<meta
+					property='og:description'
+					content='ALIVgym is a premier fitness and wellness center offering a wide range of services, including personal training, group classes, and nutritional guidance. Get fit and stay healthy with ALIVgym.'
+				/>
+				<meta
+					property='og:image'
+					content='https://www.alivgym.xyz/favicon.ico'
+				/>
+				<meta property='og:url' content='https://www.alivgym.xyz/' />
+				<link rel='canonical' href='https://www.alivgym.xyz/' />
+
+				<meta
+					property='og:title'
+					content='ALIVGym - Your Fitness Journey Starts Here'
+				/>
+				<meta
+					property='og:description'
+					content='ALIVGym offers a wide range of fitness programs and state-of-the-art facilities to help you achieve your fitness goals. Join us today and start your fitness journey!'
+				/>
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta
+					name='twitter:title'
+					content='ALIVGym - Your Fitness Journey Starts Here'
+				/>
+				<meta
+					name='twitter:description'
+					content='ALIVGym offers a wide range of fitness programs and state-of-the-art facilities to help you achieve your fitness goals. Join us today and start your fitness journey!'
+				/>
+				<meta
+					name='twitter:image'
+					content='https://www.alivgym.xyz/favicon.ico'
+				/>
 			</Head>
 
 			<Navbar />
