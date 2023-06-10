@@ -11,7 +11,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Next.js + Tailwind CSS</title>
+				<title>ALIV GYN</title>
 				<link rel='icon' href='/favicon.ico' />
 				<link
 					rel='preload'
@@ -34,10 +34,24 @@ export default function Home() {
 					type='font/woff2'
 					crossOrigin='anonymous'
 				/>
+				{/* add google analitycs */}
+
+				<script
+					async
+					src='https://www.googletagmanager.com/gtag/js?id=G-RC2CES8BLP'></script>
+
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-RC2CES8BLP');`,
+					}}
+				/>
 			</Head>
 
 			<Navbar />
-			<main className="sm:overflow-x-hidden">
+			<main className='sm:overflow-x-hidden bg-black'>
 				<div className="h-screen bg-[url('../assets/images/person.png')] bg-no-repeat bg-right">
 					<div className='py-4 mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-7xl'>
 						<div className='sm:order-last md:order-last xl:order-first my-16'>
@@ -45,7 +59,7 @@ export default function Home() {
 								<h1 className='text-2xl xl:text-4xl mx-6 xl:mx-0 font-bold text-[#d7fb03] '>
 									WELCOME TO THE
 								</h1>
-								<h1 className='text-6xl xl:text-8xl font-bold mb-3 mx-6 xl:mx-0'>
+								<h1 className='text-6xl xl:text-8xl font-bold mb-3 mx-6 xl:mx-0 text-white'>
 									<span className='line'>MOST WANTED</span> <br />
 									ONLINE PERSONAL <br />
 									TRAINER
@@ -72,7 +86,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className='sm:h-full md:h-full xl:h-screen  py-4 mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-7xl'>
-					<h1 className='text-4xl xl:text-6xl font-bold tracking-tighter mb-3 text-center my-16'>
+					<h1 className='text-4xl xl:text-6xl font-bold tracking-tighter mb-3 text-center my-16 text-white'>
 						FITNESS AND HEALTH
 					</h1>
 					<div className='flex flex-row mx-6 xl:mx-0'>
@@ -85,7 +99,7 @@ export default function Home() {
 							<div className='w-4 h-24 bg-[#d7fb03]'></div>
 						</div>
 						<div className='flex flex-col items-center justify-center'>
-							<p className='text-2xl xl:text-4xl text-center font-normal tracking-tighter ms-4 mb-3 text-clip'>
+							<p className='text-2xl xl:text-4xl text-center font-normal tracking-tighter ms-4 mb-3 text-white text-clip'>
 								Our gym offers a comprehensive range of fitness programs and
 								resources to help you achieve your health goals. From weight
 								training and cardio to yoga and group fitness classes, we have
@@ -198,12 +212,12 @@ export default function Home() {
 							</svg>
 						</div>
 						<h1
-							className='text-4xl xl:text-6xl  font-bold tracking-tighter mb-3 text-start my-16'
+							className='text-4xl xl:text-6xl  font-bold tracking-tighter mb-3 text-start my-16 text-white'
 							id='program'>
 							OUR PROGRAMS
 						</h1>
 					</div>
-					<p className='text-2xl xl:text-4xl font-normal tracking-tighter ms-4 mb-3 text-clip mt-5'>
+					<p className='text-2xl xl:text-4xl font-normal tracking-tighter ms-4 mb-3 text-clip mt-5 text-white'>
 						So why wait? Start your fitness journey today by signing up for our
 						gym membership. With our PAS-based approach, you'll find the
 						problem, agitate it, and offer the perfect solution. Don't let your

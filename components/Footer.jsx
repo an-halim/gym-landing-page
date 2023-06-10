@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Foot() {
 	return (
-		<footer className='bg-black mt-4'>
+		<footer className='bg-black'>
 			<div className='flex flex-col sm:max-w-3xl md:max-w-4xl lg:max-w-7xl px-1 py-8 mx-3 xl:mx-auto'>
 				<svg
 					width='auto'
@@ -60,8 +60,8 @@ export default function Foot() {
 							</span>
 						</div>
 					</div>
-					<div className='py-4'>
-						<h1 className='font-bold mb-2'>COMPANY</h1>
+					<div className='py-4 text-white'>
+						<h1 className='font-bold mb-2 '>COMPANY</h1>
 						<div className='flex flex-col'>
 							<a href='#' className='mb-2'>
 								About Us
@@ -71,7 +71,7 @@ export default function Foot() {
 							</a>
 						</div>
 					</div>
-					<div className='py-4'>
+					<div className='py-4 text-white'>
 						<h1 className='font-bold mb-2'>CUSTOMER SERVICE </h1>
 						<div className='flex flex-col'>
 							<a href='#' className='mb-2'>
@@ -93,7 +93,7 @@ export default function Foot() {
 					<p className='text-start text-white'>
 						* Required information
 					</p>
-					<div className='flex flex-row mt-2'>
+					<div className='flex flex-row mt-2 text-white'>
 						{/* youtube icon */}
 						<IoLogoYoutube className="w-12 h-12 mx-2" />	
 						<IoLogoInstagram className="w-12 h-12 mx-2" />

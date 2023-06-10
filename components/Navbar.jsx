@@ -68,7 +68,7 @@ const Navbar = () => {
 										.scrollIntoView({ behavior: "smooth" });
 								}}
 								class='h-12 px-6 m-2 text-lg font-bold text-black transition-colors duration-150 bg-[#d7fb03] rounded-full focus:shadow-outline hover:bg-[#a7c406]'>
-								JOIN NOW
+								START YOUR PROGRESS
 							</button>
 						</div>
 					</div>
