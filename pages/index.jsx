@@ -1,11 +1,28 @@
+var $ = require("jquery");
+if (typeof window !== "undefined") {
+	window.$ = window.jQuery = require("jquery");
+}
+
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import gepeng from "../assets/images/avatar-1.svg";
 import khalim from "../assets/images/avatar-2.svg";
 import ucupia from "../assets/images/avatar-3.svg";
+import yoga from "../assets/images/yoga.png";
+import trainerOne from "../assets/images/trainer-1.png";
+import trainerTwo from "../assets/images/trainer-2.png";
+
+import dynamic from "next/dynamic";
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+	ssr: false,
+});
 
 export default function Home() {
 	return (
@@ -163,7 +180,7 @@ export default function Home() {
 
 				<div className='sm:h-full md:h-full xl:h-screen grid xl:grid-cols-3 mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-7xl	justify-center py-16'>
 					<div className='h-2/3 w-96 bg-white rounded shadow-2xl'>
-						<div className='flex flex-col items-center'>
+						<div className='flex flex-col items-center' id='testimonials'>
 							{/* avatar */}
 							<Image
 								src={gepeng}
@@ -243,7 +260,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className='h-screen py-4 mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-7xl'>
+				<div className='h-full py-4 mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-7xl'>
 					{/* testimonial cards */}
 					<div className='flex flex-row mx-6 xl:mx-0'>
 						<div className='flex flex-row items-end me-4'>
@@ -271,8 +288,85 @@ export default function Home() {
 						health suffer any longer - take control and start achieving your
 						fitness goals now!
 					</p>
-
 					{/* card carousel */}
+					<OwlCarousel
+						className='owl-theme'
+						loop
+						margin={10}
+						nav
+						responsive={{
+							0: {
+								items: 1.5,
+							},
+							600: {
+								items: 2.5,
+							},
+							1000: {
+								items: 3,
+							},
+						}}>
+						<div className='item'>
+							<Image
+								src={yoga}
+								alt='Picture of the author'
+								width={50}
+								height={60}
+								className='rounded mt-8'
+							/>
+							<h2 className='text-2xl xl:text-4xl font-bold tracking-tighter mb-3 text-start text-white'>
+								YOGA
+							</h2>
+							<p className='text-clip text-white'>
+								workout led try our world-class trainers.
+							</p>
+						</div>
+						<div className='item'>
+							<Image
+								src={trainerOne}
+								alt='Picture of the author'
+								width={100}
+								className='rounded mt-8'
+							/>
+
+							<h2 className='text-2xl xl:text-4xl font-bold tracking-tighter mb-3 text-start text-white'>
+								STRENGTH TRAINING
+							</h2>
+							<p className='text-clip text-white'>
+								workout led try our world-class trainers.
+							</p>
+						</div>
+						<div className='item'>
+							<Image
+								src={trainerTwo}
+								alt='Picture of the author'
+								width={100}
+								className='rounded mt-8'
+							/>
+
+							<h2 className='text-2xl xl:text-4xl font-bold tracking-tighter mb-3 text-start text-white'>
+								STRENGTH TRAINING
+							</h2>
+							<p className='text-clip text-white'>
+								workout led try our world-class trainers.
+							</p>
+						</div>
+						<div className='item'>
+							<Image
+								src={yoga}
+								alt='Picture of the author'
+								width={50}
+								height={60}
+								className='rounded mt-8'
+							/>
+
+							<h2 className='text-2xl xl:text-4xl font-bold tracking-tighter mb-3 text-start text-white'>
+								YOGA
+							</h2>
+							<p className='text-clip text-white'>
+								workout led try our world-class trainers.
+							</p>
+						</div>
+					</OwlCarousel>
 				</div>
 			</main>
 

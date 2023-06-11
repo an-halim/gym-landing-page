@@ -28,7 +28,7 @@ const Navbar = () => {
 							<a
 								onClick={() => {
 									document
-										.getElementById("testimonial")
+										.getElementById("testimonials")
 										.scrollIntoView({ behavior: "smooth" });
 								}}
 								className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer'>
@@ -67,7 +67,7 @@ const Navbar = () => {
 										.getElementById("program")
 										.scrollIntoView({ behavior: "smooth" });
 								}}
-								class='h-12 px-6 m-2 text-lg font-bold text-black transition-colors duration-150 bg-[#d7fb03] rounded-full focus:shadow-outline hover:bg-[#a7c406]'>
+								className='h-12 px-6 m-2 text-lg font-bold text-black transition-colors duration-150 bg-[#d7fb03] rounded-full focus:shadow-outline hover:bg-[#a7c406]'>
 								START YOUR PROGRESS
 							</button>
 						</div>
@@ -113,7 +113,11 @@ const Navbar = () => {
 				<div className='md:hidden'>
 					<div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
 						<a
-							href='#'
+							onClick={() => {
+								document
+									.getElementById("testimonials")
+									.scrollIntoView({ behavior: "smooth" });
+							}}
 							className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium'>
 							TESTIMONIALS
 						</a>
@@ -138,7 +142,7 @@ const Navbar = () => {
 									.getElementById("program")
 									.scrollIntoView({ behavior: "smooth" });
 							}}
-							class='h-12 px-6 m-2 text-lg font-bold text-black transition-colors duration-150 bg-[#d7fb03] rounded-full focus:shadow-outline hover:bg-[#a7c406]'>
+							className='h-12 px-6 m-2 text-lg font-bold text-black transition-colors duration-150 bg-[#d7fb03] rounded-full focus:shadow-outline hover:bg-[#a7c406]'>
 							JOIN NOW
 						</button>
 					</div>
