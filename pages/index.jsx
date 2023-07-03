@@ -3,6 +3,8 @@ if (typeof window !== "undefined") {
 	window.$ = window.jQuery = require("jquery");
 }
 
+import { useState } from "react";
+
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -18,6 +20,7 @@ import ucupia from "../assets/images/avatar-3.svg";
 import yoga from "../assets/images/yoga.png";
 import trainerOne from "../assets/images/trainer-1.png";
 import trainerTwo from "../assets/images/trainer-2.png";
+import { toast, ToastContainer } from "react-nextjs-toast";
 
 import dynamic from "next/dynamic";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
@@ -25,6 +28,28 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 });
 
 export default function Home() {
+	const [email, setEmail] = useState("");
+
+	function handleSignUp(e) {
+		e.preventDefault();
+		fetch("/api/signup", {
+			method: "POST",
+			body: JSON.stringify({ email }),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				document.querySelector("input[name=email]").value = "";
+				toast.notify("Thanks for join us!", {
+					title: "Success",
+					type: "success",
+					duration: 5,
+					sticky: false,
+				});
+			});
+	}
 	return (
 		<>
 			<Head>
@@ -115,6 +140,7 @@ export default function Home() {
 			</Head>
 
 			<Navbar />
+			<ToastContainer />
 			<main className='sm:overflow-x-hidden bg-black'>
 				<div className="h-screen bg-[url('../assets/images/person.png')] bg-no-repeat bg-right">
 					<div className='py-4 mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-7xl'>
@@ -370,7 +396,7 @@ export default function Home() {
 				</div>
 			</main>
 
-			<Footer />
+			<Footer email={email} handleSignUp={handleSignUp} setEmail={setEmail} />
 		</>
 	);
 }

@@ -1,11 +1,13 @@
+import React, { useState } from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { IoLogoInstagram } from "react-icons/io5";
 import { IoLogoYoutube } from "react-icons/io5";
 import { IoLogoTwitter } from "react-icons/io5";
 import Image from "next/image";
+import { toast, ToastContainer } from "react-nextjs-toast";
 
-export default function Foot() {
+export default function Foot(props) {
 	return (
 		<footer className='bg-black'>
 			<div className='flex flex-col sm:max-w-3xl md:max-w-4xl lg:max-w-7xl px-1 py-8 mx-3 xl:mx-auto'>
@@ -42,11 +44,15 @@ export default function Foot() {
 						</h2>
 						<h3 className='mb-2 font-semibold'>EMAIL ADDRESS *</h3>
 						<input
-							type='text'
+							name='email'
+							type='email'
+							onChange={(e) => props.setEmail(e.target.value)}
 							className='border-2 border-white px-9 py-2 me-2 text-black'
 							placeholder='Enter Your Email Address'
 						/>
-						<button className='bg-black px-6 py-2 border-2 border-white mb-3'>
+						<button
+							className='bg-black px-6 py-2 border-2 border-white mb-3'
+							onClick={props.handleSignUp}>
 							SIGN UP
 						</button>
 						<div className='flex flex-col'>
@@ -81,23 +87,18 @@ export default function Foot() {
 								My Account
 							</a>
 							<a href='#' className='mb-2'>
-								Store Location
-							</a>
-							<a href='#' className='mb-2'>
 								Redeem Rewards
 							</a>
 						</div>
 					</div>
 				</div>
 				<div className='w-full items-center'>
-					<p className='text-start text-white'>
-						* Required information
-					</p>
+					<p className='text-start text-white'>* Required information</p>
 					<div className='flex flex-row mt-2 text-white'>
 						{/* youtube icon */}
-						<IoLogoYoutube className="w-12 h-12 mx-2" />	
-						<IoLogoInstagram className="w-12 h-12 mx-2" />
-						<IoLogoTwitter className="w-12 h-12 mx-2" />
+						<IoLogoYoutube className='w-12 h-12 mx-2' />
+						<IoLogoInstagram className='w-12 h-12 mx-2' />
+						<IoLogoTwitter className='w-12 h-12 mx-2' />
 					</div>
 				</div>
 			</div>
